@@ -34,13 +34,10 @@ public class Sample {
         File screenShot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 //        FileUtils.copyFile(screenShot,new File("/home/psg/screenshot.png"));
 
-        List<WebElement>elements = driver.findElements(By.tagName("a"));
-        for (WebElement we :
-                elements) {
-            System.out.println(we.getText());
-
-        }
-
+        //*[@id="PDGcourpercView"]/tbody/tr[8]/td[7]
+        String selectLinkOpeninNewTab = Keys.chord(Keys.CONTROL,"t");
+        driver.findElement(By.tagName("body")).sendKeys(selectLinkOpeninNewTab);
+        driver.get("stackoverflow.com");
 
     }
 }
