@@ -14,7 +14,6 @@ import java.util.List;
  */
 public class Sample {
     public static void main(String[] args) throws IOException {
-//        System.setProperty("webdriver.chrome.driver","/home/psg/selenium-2.53.1/chromedriver");
 
         WebDriver driver = new FirefoxDriver();
         driver.get("http://ecampus.psgtech.ac.in/");
@@ -35,9 +34,6 @@ public class Sample {
 
         File screenShot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(screenShot,new File("/home/psg/screenshot.png"));
-
-        //*[@id="PDGcourpercView"]/tbody/tr[8]/td[7]
-
 
 
         //Hold down the keys "Control" and "T" to open a new tab and open stackoverflow.com
